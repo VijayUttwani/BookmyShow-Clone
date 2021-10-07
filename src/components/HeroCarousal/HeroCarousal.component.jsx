@@ -4,10 +4,6 @@ import HeroSlider from "react-slick";
 // Component
 import { NextArrow, PrevArrow } from "./Arrows.component";
 
-// Import css files
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 const HeroCarousal = () => {
 	const settingsLg = {
 		arrows: true,
@@ -53,7 +49,7 @@ const HeroCarousal = () => {
 			<div className="hidden lg:block">
 				<HeroSlider {...settingsLg}>
 					{images.map((image) => (
-						<div className="w-full h-96 px-1.5 py-2.5">
+						<div className="w-full h-80 px-1.5 py-2.5">
 							<img
 								src={image}
 								alt="testing"
