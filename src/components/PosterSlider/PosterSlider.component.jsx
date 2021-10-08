@@ -20,7 +20,7 @@ export const PosterSlider = (props) => {
 					{props.title}
 				</h3>
 				<p
-					className={`text-base ${
+					className={`text-base font-semibold ${
 						props.isDark ? "text-white" : "text-gray-600"
 					}`}
 				>
