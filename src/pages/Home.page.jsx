@@ -20,7 +20,7 @@ const HomePage = () => {
 				</div>
 
 				<div className="bg-premier-700 py-10">
-					<div className="container mx-auto px-10 flex flex-col gap-5">
+					<div className="container mx-auto px-4 flex flex-col gap-5">
 						<div className="hidden md:flex">
 							<img
 								src="https://in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-rupay-banner-web-collection-202104230555.png"
@@ -38,7 +38,7 @@ const HomePage = () => {
 				</div>
 			</div>
 
-			<div className="container mx-auto px-10 py-8 flex flex-col">
+			<div className="container mx-auto px-1 md:px-4 py-8 flex flex-col">
 				<PosterSlider
 					images={TempPosters}
 					title="Online Streaming Events"
@@ -46,7 +46,7 @@ const HomePage = () => {
 				/>
 			</div>
 
-			<div className="container mx-auto px-10 py-8 flex flex-col">
+			<div className="container mx-auto px-1 md:px-4 py-8 flex flex-col">
 				<PosterSlider
 					images={TempPosters}
 					title="Outdoor Events"
