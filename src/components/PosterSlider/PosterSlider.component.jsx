@@ -9,9 +9,11 @@ import PosterCarousalSettings from "../../config/PosterCaraousal.config";
 import PremierImage from "../../config/TempPosters.config";
 
 export const PosterSlider = (props) => {
+	const sliderConfig = props.config ? props.config : PosterCarousalSettings;
+
 	return (
 		<>
-			<div className="flex flex-col items-start px-4 my-2">
+			<div className="flex flex-col items-start px-1 md:px-4 my-2">
 				<h3
 					className={`text-2xl font-bold ${
 						props.isDark ? "text-white" : "text-black"
@@ -27,7 +29,7 @@ export const PosterSlider = (props) => {
 					{props.subtitle}
 				</p>
 			</div>
-			<Slider {...PosterCarousalSettings}>
+			<Slider {...sliderConfig}>
 				{props.images.map((image) => (
 					<Poster {...image} isDark={props.isDark} />
 				))}
