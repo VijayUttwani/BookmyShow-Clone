@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCcVisa, FaGooglePay } from "react-icons/fa";
+import { FaCcVisa } from "react-icons/fa";
 import { BiMoviePlay } from "react-icons/bi";
 
 // Components

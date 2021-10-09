@@ -13,7 +13,7 @@ const NavSm = () => {
 				<div>
 					<h3 className="text-2xl font-bold">It All Starts Here!</h3>
 					<span className="text-gray-400 text-xs flex items-center">
-						Bengaluru <BiChevronRight />
+						Indore <BiChevronRight />
 					</span>
 				</div>
 				<div className="w-7 h-7">
@@ -60,9 +60,9 @@ const NavLg = () => {
 				</div>
 				<div className="flex items-center gap-3">
 					<span className="text-gray-300 text-sm flex items-center cursor-pointer hover:text-white">
-						Bengaluru <BiChevronDown />
+						Indore <BiChevronDown />
 					</span>
-					<button className="bg-signin-300 text-white px-3 py-1 text-xs rounded">
+					<button className="bg-signin-400 text-white px-3 py-1 text-xs rounded">
 						Sign in
 					</button>
 					<div className="w-8 h-8 text-white">

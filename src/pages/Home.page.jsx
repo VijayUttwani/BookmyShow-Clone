@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // Components
 import EntertainementCardSlider from "../components/Entertainment/Entertainmentcard.component";
@@ -7,8 +7,40 @@ import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 
 // Configs
 import TempPosters from "../config/TempPosters.config";
+import axios from "axios";
 
 const HomePage = () => {
+	const [popularMovies, setpopularMovies] = useState([]);
+	const [topRatedMovies, setTopRatedMovies] = useState([]);
+	const [upcomingMovies, setUpcomingMovies] = useState([]);
+
+	useEffect(() => {
+		const requestPopularMovies = async () => {
+			const getPopularMovies = await axios.get("/movie/popular");
+			setpopularMovies(getPopularMovies.data.results);
+		};
+
+		requestPopularMovies();
+	}, []);
+
+	useEffect(() => {
+		const requestTopRatedMovies = async () => {
+			const getTopRatedMovies = await axios.get("/movie/top_rated");
+			setTopRatedMovies(getTopRatedMovies.data.results);
+		};
+
+		requestTopRatedMovies();
+	}, []);
+
+	useEffect(() => {
+		const requestUpcomingMovies = async () => {
+			const getUpcomingmovies = await axios.get("/movie/upcoming");
+			setUpcomingMovies(getUpcomingmovies.data.results);
+		};
+
+		requestUpcomingMovies();
+	}, []);
+
 	return (
 		<>
 			<div className="flex flex-col gap-6">
@@ -29,9 +61,9 @@ const HomePage = () => {
 							/>
 						</div>
 						<PosterSlider
-							images={TempPosters}
+							images={popularMovies}
 							title="Premieres"
-							subtitle="Brand new releases every friday" 
+							subtitle="Brand new releases every friday"
 							isDark={true}
 						/>
 					</div>
@@ -40,7 +72,7 @@ const HomePage = () => {
 
 			<div className="container mx-auto px-1 md:px-4 py-8 flex flex-col">
 				<PosterSlider
-					images={TempPosters}
+					images={topRatedMovies}
 					title="Online Streaming Events"
 					isDark={false}
 				/>
@@ -48,7 +80,7 @@ const HomePage = () => {
 
 			<div className="container mx-auto px-1 md:px-4 py-8 flex flex-col">
 				<PosterSlider
-					images={TempPosters}
+					images={upcomingMovies}
 					title="Outdoor Events"
 					isDark={false}
 				/>
