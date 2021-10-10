@@ -62,7 +62,7 @@ const NavLg = () => {
 					<span className="text-gray-300 text-sm flex items-center cursor-pointer hover:text-white">
 						Indore <BiChevronDown />
 					</span>
-					<button className="bg-signin-400 text-white px-3 py-1 text-xs rounded">
+					<button className="bg-signin-400 text-white px-3 py-1 text-xs rounded hover:bg-signin-500">
 						Sign in
 					</button>
 					<div className="w-8 h-8 text-white">
