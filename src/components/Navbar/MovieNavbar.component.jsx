@@ -45,7 +45,7 @@ const NavLg = () => {
 					<span className="text-gray-300 text-sm flex items-center cursor-pointer hover:text-white">
 						Indore <BiChevronDown />
 					</span>
-					<button className="bg-signin-400 text-white px-3 py-1 text-xs rounded">
+					<button className="bg-signin-400 text-white px-3 py-1 text-xs rounded hover:bg-signin-500">
 						Sign in
 					</button>
 					<div className="w-8 h-8 text-white">
@@ -60,7 +60,7 @@ const NavLg = () => {
 const MovieNavbar = () => {
 	return (
 		<>
-			<nav className=" absolute inset-x-0 z-30 bg-opacity-10 backdrop-filter backdrop-blur-lg lg:relative lg:bg-navbar-700 px-4 py-2">
+			<nav className=" absolute inset-x-0 z-30 bg-opacity-10 backdrop-filter backdrop-blur-sm lg:relative lg:bg-navbar-700 px-4 py-2">
 				<div className="md:hidden">
 					{/* Mobile Screen */}
 					<NavSm />

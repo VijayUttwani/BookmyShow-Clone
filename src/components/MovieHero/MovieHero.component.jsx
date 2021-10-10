@@ -7,7 +7,7 @@ import MovieInfo from "./MovieInfo.component";
 import { MovieContext } from "../../context/movie.context";
 
 const MovieHero = () => {
-	const {movie} = useContext(MovieContext);
+	const { movie } = useContext(MovieContext);
 	return (
 		<>
 			<div>
@@ -34,7 +34,7 @@ const MovieHero = () => {
 					<div className="absolute z-20 bottom-4">
 						<MovieInfo />
 					</div>
-					<div className="w-full h-56 bg-opacity-50 absolute bg-black z-10 bottom-0" />
+					<div className="w-full h-56 bg-opacity-70 absolute bg-black z-10 bottom-0" />
 					<img
 						src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
 						alt="poster"
